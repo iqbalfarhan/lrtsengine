@@ -5,7 +5,7 @@ namespace Iqbalfarhan\Lrtsengine\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
-class GenerateStatWidget extends Command
+class GenerateLrtsStatWidget extends Command
 {
     /**
      * The name and signature of the console command.

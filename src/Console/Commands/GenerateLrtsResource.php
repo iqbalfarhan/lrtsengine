@@ -3,22 +3,12 @@
 namespace Iqbalfarhan\Lrtsengine\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use function Laravel\Prompts\multiselect;
-use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
 use function Laravel\Prompts\textarea;
 
-if (!function_exists('app')) {
-    function app($abstract = null, array $parameters = [])
-    {
-        return \Illuminate\Support\Facades\App::getFacadeRoot()
-            ->make($abstract, $parameters);
-    }
-}
-
-class GenerateRModel extends Command
+class GenerateLrtsResource extends Command
 {
     /**
      * The name and signature of the console command.

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Iqbalfarhan\Lrtsengine\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Spatie\Permission\Models\Permission;
 use Str;
 
-class GeneratePermissionCommand extends Command
+class GenerateLrtsPermission extends Command
 {
     protected $signature = 'lrts:permission
         {feature? : Nama fitur tunggal (ex: user)}

@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-class GenerateRView extends Command
+class GenerateLrtsView extends Command
 {
     /**
      * The name and signature of the console command.

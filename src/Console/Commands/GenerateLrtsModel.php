@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-class GenerateAModel extends Command
+class GenerateLrtsModel extends Command
 {
     protected $signature = 'lrts:model {name} {--s|softDelete} {--fields=} {--m|media}';
     protected $description = 'Generate model, factory, seeder, requests, and migration for a given name';

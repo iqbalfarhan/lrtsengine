@@ -2,12 +2,11 @@
 
 namespace Iqbalfarhan\Lrtsengine\Providers;
 
-use App\Console\Commands\GeneratePermissionCommand;
 use Illuminate\Support\ServiceProvider;
-use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateAModel;
-use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateRModel;
-use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateRView;
-use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateStatWidget;
+use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsPermission;
+use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsModel;
+use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsStatWidget;
+use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsView;
 
 class LrtsEngineServiceProvider extends ServiceProvider
 {
@@ -21,11 +20,10 @@ class LrtsEngineServiceProvider extends ServiceProvider
         ], 'lrtsengine-resources');
 
         $this->commands([
-            GenerateAModel::class,
-            GeneratePermissionCommand::class,
-            GenerateRModel::class,
-            GenerateRView::class,
-            GenerateStatWidget::class,
+            GenerateLrtsModel::class,
+            GenerateLrtsPermission::class,
+            GenerateLrtsView::class,
+            GenerateLrtsStatWidget::class,
         ]);
     }
 
