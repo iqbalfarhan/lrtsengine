@@ -31,7 +31,7 @@ class GenerateLrtsView extends Command
         $name = strtolower(strval($this->argument('name')));
         $Name = Str::studly($name);
         $Names = Str::plural($name);
-        $basePath = rtrim(strval(config("template-starter.generated-react-files-path")), '/'). "/{$name}";
+        $basePath = rtrim(strval(config("lrtsengine.generated-react-files-path")), '/'). "/{$name}";
 
         $isSoftDelete = boolval($this->option('softDelete'));
         $withMedia = boolval($this->option('media'));

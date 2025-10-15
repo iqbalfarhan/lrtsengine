@@ -5,6 +5,7 @@ namespace Iqbalfarhan\Lrtsengine\Providers;
 use Illuminate\Support\ServiceProvider;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsPermission;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsModel;
+use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsResource;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsStatWidget;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsView;
 
@@ -26,6 +27,7 @@ class LrtsEngineServiceProvider extends ServiceProvider
             GenerateLrtsModel::class,
             GenerateLrtsPermission::class,
             GenerateLrtsView::class,
+            GenerateLrtsResource::class,
             GenerateLrtsStatWidget::class,
         ]);
     }

@@ -28,9 +28,9 @@ class GenerateLrtsStatWidget extends Command
     {
         $feature = strtolower($this->argument('feature'));
 
-        $basePath = config('template-starter.generated-react-files-path');
+        $basePath = config('lrtsengine.generated-react-files-path');
         if (!$basePath) {
-            $this->error('Konfigurasi path React tidak ditemukan pada config/template-starter.php (generated-react-files-path).');
+            $this->error('Konfigurasi path React tidak ditemukan pada config/lrtsengine.php (generated-react-files-path).');
             return self::FAILURE;
         }
 
