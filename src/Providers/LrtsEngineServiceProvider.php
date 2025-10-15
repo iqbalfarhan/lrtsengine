@@ -47,8 +47,11 @@ class LrtsEngineServiceProvider extends ServiceProvider
         // Publish resources (views, assets, dsb)
         $this->publishes([
             __DIR__ . '/../../resources/' => resource_path(),
-            __DIR__ . '/../../app/Http/Controllers/' => app_path('Http/Controllers'),
         ], 'lrtsengine-resources');
+
+        $this->publishes([
+            __DIR__ . '/../../app/Http/Controllers/Controller.php' => app_path('Http/Controllers/Controller.php'),
+        ], 'lrtsengine-controller');
 
         // Kalau lo punya views
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'lrtsengine');
