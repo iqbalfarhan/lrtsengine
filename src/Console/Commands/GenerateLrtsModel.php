@@ -105,7 +105,7 @@ class GenerateLrtsModel extends Command
         // Add routes to routes/web.php
         $this->addRoute($softDelete, $withMedia, $name, $Name);
 
-        Artisan::call('generate:permission -as');
+        Artisan::call('lrts:permission -as');
 
         return self::SUCCESS;
     }

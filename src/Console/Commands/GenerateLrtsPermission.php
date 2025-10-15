@@ -40,9 +40,9 @@ class GenerateLrtsPermission extends Command
             if (!$featuresInput) {
                 $this->error(implode("\n", [
                     "❌ Harus isi feature. Contoh: ,
-                    php artisan generate:permission user ,
-                    php artisan generate:permission -f=user,role ,
-                    php artisan generate:permission --all",
+                    php artisan lrts:permission user ,
+                    php artisan lrts:permission -f=user,role ,
+                    php artisan lrts:permission --all",
                 ]));
                 return;
             }
