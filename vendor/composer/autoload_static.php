@@ -12,8 +12,8 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
-        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
@@ -43,6 +43,10 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         'v' => 
         array (
             'voku\\' => 5,
+        ),
+        'Z' => 
+        array (
+            'ZipStream\\' => 10,
         ),
         'W' => 
         array (
@@ -84,7 +88,12 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Clock\\' => 24,
+            'Spatie\\TemporaryDirectory\\' => 26,
             'Spatie\\Permission\\' => 18,
+            'Spatie\\MediaLibrary\\' => 20,
+            'Spatie\\LaravelPackageTools\\' => 27,
+            'Spatie\\Image\\' => 13,
+            'Spatie\\ImageOptimizer\\' => 22,
         ),
         'R' => 
         array (
@@ -156,6 +165,7 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         'C' => 
         array (
             'Cron\\' => 5,
+            'Composer\\Semver\\' => 16,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
@@ -173,6 +183,10 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'ZipStream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maennchen/zipstream-php/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -302,9 +316,29 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
         ),
+        'Spatie\\TemporaryDirectory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/temporary-directory/src',
+        ),
         'Spatie\\Permission\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
+        ),
+        'Spatie\\MediaLibrary\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-medialibrary/src',
+        ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
+        ),
+        'Spatie\\Image\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/image/src',
+        ),
+        'Spatie\\ImageOptimizer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/image-optimizer/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -462,6 +496,10 @@ class ComposerStaticInitfd9863b7628a8a8300c7bb7402562384
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'Composer\\Semver\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/semver/src',
         ),
         'Carbon\\Doctrine\\' => 
         array (

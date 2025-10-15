@@ -15,7 +15,7 @@ class GenerateLrtsResource extends Command
      *
      * @var string
      */
-    // protected $signature = 'generate:rmodel {name} {--s|softDelete} {--fields=} {--m|media}';
+    // protected $signature = 'lrts:model {name} {--s|softDelete} {--fields=} {--m|media}';
     protected $signature = 'lrts:resource {name?}';
 
     /**
@@ -42,24 +42,24 @@ class GenerateLrtsResource extends Command
         $statWidget = in_array('stat widget', $options, true);
         $fieldsCsv = $this->fieldsToCsv($fields);
 
-        $this->info("🚀 Running generate:amodel {$Name} ...");
-        $this->call('generate:amodel', [
+        $this->info("🚀 Running lrts:model {$Name} ...");
+        $this->call('lrts:model', [
             'name' => $Name,
             '--softDelete' => $softDelete,
             '--fields' => $fieldsCsv,
             '--media' => $media,
         ]);
 
-        $this->info("🎨 Running generate:rview {$name} ...");
-        $this->call('generate:rview', [
+        $this->info("🎨 Running lrts:view {$name} ...");
+        $this->call('lrts:view', [
             'name' => $name,
             '--softDelete' => $softDelete,
             '--fields' => $fieldsCsv,
             '--media' => $media,
         ]);
 
-        $this->info("🎨 Running generate:statwidget {$name} ...");
-        $this->call('generate:statwidget', [
+        $this->info("🎨 Running lrts:statwidget {$name} ...");
+        $this->call('lrts:statwidget', [
             'name' => $name,
         ]);
 
