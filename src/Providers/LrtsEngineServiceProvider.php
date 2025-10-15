@@ -8,6 +8,7 @@ use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsModel;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsResource;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsStatWidget;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsView;
+use Iqbalfarhan\Lrtsengine\Console\Commands\LrtsInstall;
 
 class LrtsEngineServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,7 @@ class LrtsEngineServiceProvider extends ServiceProvider
 
         // Register console commands
         $this->commands([
+            LrtsInstall::class,
             GenerateLrtsModel::class,
             GenerateLrtsPermission::class,
             GenerateLrtsView::class,
