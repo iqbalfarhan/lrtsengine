@@ -15,10 +15,13 @@ class LrtsEngineServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->publishes([
-            __DIR__.'/../../resources/' => resource_path(),
-        ], 'lrtsengine-resources');
+        // Merge config biar bisa dipakai langsung
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/lrtsengine.php',
+            'lrtsengine'
+        );
 
+        // Register console commands
         $this->commands([
             GenerateLrtsModel::class,
             GenerateLrtsPermission::class,
@@ -32,8 +35,27 @@ class LrtsEngineServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Publish config
         $this->publishes([
-            __DIR__.'/../../config/lrtsengine.php' => config_path('lrtsengine.php'),
+            __DIR__ . '/../../config/lrtsengine.php' => config_path('lrtsengine.php'),
         ], 'lrtsengine-config');
+
+        // Publish resources (views, assets, dsb)
+        $this->publishes([
+            __DIR__ . '/../../resources/' => resource_path(),
+        ], 'lrtsengine-resources');
+
+        // Kalau lo punya views
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'lrtsengine');
+
+        // Kalau lo punya routes
+        if (file_exists(__DIR__ . '/../../routes/web.php')) {
+            $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        }
+
+        // Kalau lo punya migrations
+        if (is_dir(__DIR__ . '/../../database/migrations')) {
+            $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        }
     }
 }
