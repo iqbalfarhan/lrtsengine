@@ -22,7 +22,7 @@ class LrtsInstall extends Command
      *
      * @var string
      */
-    protected $description = 'Generate React view structure under resources/js/pages/{name}';
+    protected $description = 'Install iqbalfarhan/lrtsengine package, include config, resources, and vendor publish';
 
     /**
      * Execute the console command.
