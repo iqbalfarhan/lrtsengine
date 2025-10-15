@@ -2,6 +2,7 @@
 
 namespace Iqbalfarhan\Lrtsengine\Providers;
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsPermission;
 use Iqbalfarhan\Lrtsengine\Console\Commands\GenerateLrtsModel;
@@ -65,5 +66,7 @@ class LrtsEngineServiceProvider extends ServiceProvider
         if (is_dir(__DIR__ . '/../../database/migrations')) {
             $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
         }
+
+        Artisan::call('migrate');
     }
 }
